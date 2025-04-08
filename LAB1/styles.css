@@ -1,0 +1,31 @@
+body{
+    background-color: white;
+}
+
+.box{
+    background-color: white; 
+    text-align: left;
+    width: 80%; 
+}
+/*
+.box:hover{
+    background-color: grey; 
+    padding: 10%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 80%; 
+}
+*/
+#content{
+    margin: 5% 5%;
+}
+
+#table, #table th, #table td{
+    border: 2px solid black;
+}
+
+img{
+    width: 400px;
+    height: 592px;
+}
