@@ -1,0 +1,136 @@
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1020px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  background-color: #555;
+}
+
+.header-container {
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+
+.slide-in {
+  position: relative;
+  left: -100%;
+  animation-name: slideLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+
+@keyframes slideLeft {
+  to {
+      left: 0;
+  }
+}
+
+.content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.movie-table th, .movie-table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 400px;
+  transition: transform 2s ease;
+}
+
+.poster:hover img {
+  transform: scale(1.2);
+}
+
+.poster span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: none;
+}
+
+.poster:hover span {
+  display: block;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 480px) {
+  .nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .poster img {
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .nav {
+      justify-content: space-between;
+  }
+
+  .content {
+      flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .nav {
+      justify-content: space-around;
+  }
+
+  .content {
+      flex-direction: column;
+  }
+}
