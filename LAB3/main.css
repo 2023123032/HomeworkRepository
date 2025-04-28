@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: white;
+  background-color: gray;
   padding: 10px;
 }
 
@@ -58,8 +58,6 @@ body {
 
 .content {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -70,7 +68,10 @@ body {
 }
 
 .movie {
+  display: flex;
+  flex-direction: column; /*row?*/
   padding: 5%;
+  box-sizing: border-box;
 }
 
 .poster {
@@ -80,6 +81,8 @@ body {
 .poster img {
   width: 100%;
   max-width: 400px;
+  height: 450px;
+  object-fit: cover;
   transition: transform 2s ease;
 }
 
@@ -103,20 +106,19 @@ body {
   display: block;
 }
 
-.multicolumn{
-  column-count: auto;
-  column-gap: 3px;
-}
-
 /* Responsive Layouts */
 @media screen and (max-width: 480px) {
   .nav {
       flex-direction: column;
       align-items: center;
   }
-
   .poster img {
       max-width: 100%;
+  }
+  .multicolumn {
+    column-count: 1;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
   }
 }
 
@@ -124,9 +126,13 @@ body {
   .nav {
       justify-content: space-between;
   }
-
   .content {
       flex-direction: column;
+  }
+  .multicolumn {
+    column-count: 2;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
   }
 }
 
@@ -134,8 +140,81 @@ body {
   .nav {
       justify-content: space-around;
   }
-
   .content {
       flex-direction: column;
   }
+  .multicolumn {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
+  }
+}
+
+/*css for login&signup*/
+h1 {
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+a {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.form-box {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #aaa;
+  width: 300px;
+  height: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="radio"]{
+  width: auto;
+  margin: 5px;
+}
+
+button {
+  width: 25%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.signup, .login {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
 }
