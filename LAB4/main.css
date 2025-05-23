@@ -1,0 +1,245 @@
+/*css for login&signup*/
+h1 {
+  font-size: 24px;
+  color: #111;
+  margin: 10px;
+}
+
+#links {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.form-box {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #aaa;
+  width: 300px;
+  height: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="radio"]{
+  width: auto;
+  margin: 5px;
+}
+
+button {
+  width: 25%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.signup, .login {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+/*===============================================*/
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1020px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/*===============================================*/
+
+.header-container {
+  overflow: auto;
+  position: relative;
+  height: 60px;
+}
+
+.slide-in {
+  position: relative;
+  animation-name: slideLeft;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes slideLeft {
+  from{left: -100%;}
+  25%{left: -75%}
+  55%{left: -50%}
+  75%{left: -25%}
+  to{left: 0%;}
+}
+
+/*===============================================*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+
+.nav a {
+  color: black;
+  padding: 5px 5px;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.nav a:hover {
+  background-color: gray;
+}
+
+/*===============================================*/
+
+.content {
+  margin-top: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; /* nowrap맞나?*/
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 200px;
+  display: flex;
+  flex-direction: column; /*row?*/
+  padding: 5%;
+  box-sizing: border-box;
+  border-color: #111;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 160px;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 2s ease;
+}
+
+.poster:hover img {
+  transform: scale(1.2);
+}
+
+.poster span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  display: none;
+}
+
+.poster:hover span {
+  display: block;
+}
+
+.multicolumn-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.multicolumn {
+  column-count: 2;
+  border-top: 2px solid black;
+  padding-top: 5px;
+}
+
+/*===============================================*/
+
+@media screen and (max-width: 480px) {
+  .nav {
+      flex-direction: column;
+      align-items: center;
+  }
+  .poster img {
+      max-width: 100%;
+  }
+  .multicolumn {
+    column-count: 1;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .nav {
+      justify-content: space-between;
+  }
+  .content {
+      flex-direction: column;
+  }
+  .multicolumn {
+    column-count: 2;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .nav {
+      justify-content: space-around;
+  }
+  .content {
+      flex-direction: column;
+  }
+  .multicolumn {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: 2px solid gray;
+  }
+}

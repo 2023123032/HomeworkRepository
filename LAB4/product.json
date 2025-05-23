@@ -1,0 +1,18 @@
+{
+    "Dark knight": {
+        "id": 1,
+        "name": "The Dark Knight",
+        "poster_path": "./images/DarkKnight.jpg",
+        "lang": "English",
+        "vote_average": 8.3,
+        "vote_count": 12269,
+        "runtime": 152,
+        "genre": [
+            {"id": 18, "name": "Drama"},
+            {"id": 28, "name": "Action"},
+            {"id": 80, "name": "Crime"},
+            {"id": 53, "name": "Thriller"}
+        ],
+        "plot": "The Dark Knight Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+    }
+}
