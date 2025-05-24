@@ -87,9 +87,10 @@ body {
 /*===============================================*/
 
 .header-container {
-  overflow: auto;
+  overflow: hidden; /*orig auto*/
   position: relative;
   height: 60px;
+  text-align: center; /*new*/
 }
 
 .slide-in {
@@ -97,6 +98,7 @@ body {
   animation-name: slideLeft;
   animation-timing-function: linear;
   animation-duration: 2s;
+  display: inline-block; /*new*/
 }
 
 @keyframes slideLeft {
@@ -124,10 +126,45 @@ body {
   padding: 5px 5px;
   font-size: 14px;
   margin-bottom: 0px;
+  text-decoration: none; /*new*/
 }
 
 .nav a:hover {
   background-color: gray;
+  color: white; /*new*/
+}
+
+/*===============================================*/
+
+.controls {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button, .controls select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button {
+    background-color: #5cb85c;
+    color: white;
+    border-color: #4cae4c;
+}
+
+.controls button:hover {
+    background-color: #449d44;
 }
 
 /*===============================================*/
@@ -150,19 +187,25 @@ body {
   width: 200px;
   display: flex;
   flex-direction: column; /*row?*/
-  padding: 5%;
+  padding: 5px;
   box-sizing: border-box;
   border-color: #111;
+  text-align: center; /*new*/
+}
+
+.movie:hover { /*new*/
+  box-shadow: 0 4px 8px black;
 }
 
 .poster {
   position: relative;
+  margin-bottom: 10px; /*new*/
 }
 
 .poster img {
   width: 100%;
   max-width: 160px;
-  height: 180px;
+  height: 180px; /*250?*/
   object-fit: cover;
   transition: transform 2s ease;
 }
@@ -171,23 +214,37 @@ body {
   transform: scale(1.2);
 }
 
-.poster span {
+.poster .plot {
   position: absolute;
-  bottom: 10px;
+  bottom: 10px; /*t r l b =0?*/
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: black;
   color: white;
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 5px;
-  display: none;
+  display: flex; /*orig none ->display: block;*/
+  /*---new---*/
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: auto; /*overflow-y?*/
+  box-sizing: border-box;
 }
 
-.poster:hover span {
-  display: block;
+.movie h2 {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+    min-height: 48px; /* 제목 높이 고정 (2줄 정도) */
 }
 
-.multicolumn-wrapper {
+.movie p {
+    font-size: 12px;
+    margin: 3px 0;
+    color: #555;
+}
+
+/* .multicolumn-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -197,7 +254,7 @@ body {
   column-count: 2;
   border-top: 2px solid black;
   padding-top: 5px;
-}
+} */
 
 /*===============================================*/
 
@@ -206,13 +263,13 @@ body {
       flex-direction: column;
       align-items: center;
   }
-  .poster img {
-      max-width: 100%;
+  .controls input[type="text"] {
+      width: 80%;
+      margin-bottom: 10px;
   }
-  .multicolumn {
-    column-count: 1;
-    column-gap: 10px;
-    column-rule: 2px solid gray;
+  .controls button, .controls select {
+      width: 80%;
+      margin-bottom: 10px;
   }
 }
 
@@ -223,10 +280,8 @@ body {
   .content {
       flex-direction: column;
   }
-  .multicolumn {
-    column-count: 2;
-    column-gap: 10px;
-    column-rule: 2px solid gray;
+  .movie {
+      width: calc(50% - 30px); /* 한 줄에 2개 (간격 고려) */
   }
 }
 
@@ -237,9 +292,7 @@ body {
   .content {
       flex-direction: column;
   }
-  .multicolumn {
-    column-count: 3;
-    column-gap: 10px;
-    column-rule: 2px solid gray;
+  .movie {
+      width: calc(33.333% - 34px); /* 한 줄에 3개 (간격 고려) */
   }
 }

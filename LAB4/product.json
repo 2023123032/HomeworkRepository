@@ -14,5 +14,469 @@
             {"id": 53, "name": "Thriller"}
         ],
         "plot": "The Dark Knight Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+    },
+    "Star Wars: Episode I - The Phantom Menace": {
+        "id": 2,
+        "name": "Star Wars: Episode I - The Phantom Menace",
+        "poster_path": "./images/PhantomMenace.jpg",
+        "lang": "English",
+        "vote_average": 6.4,
+        "vote_count": 5279,
+        "runtime": 136,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Trade Federation plots to take over the peaceful planet of Naboo."
+    },
+    "Star Wars: Episode II - Attack of the Clones": {
+        "id": 3,
+        "name": "Star Wars: Episode II - Attack of the Clones",
+        "poster_path": "./images/AttackoftheClones.jpg",
+        "lang": "English",
+        "vote_average": 6.4,
+        "vote_count": 4883,
+        "runtime": 142,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to secede from the Galactic Republic."
+    },
+    "Star Wars: Episode III - Revenge of the Sith": {
+        "id": 4,
+        "name": "Star Wars: Episode III - Revenge of the Sith",
+        "poster_path": "./images/RevengeoftheSith.jpg",
+        "lang": "English",
+        "vote_average": 7.1,
+        "vote_count": 5008,
+        "runtime": 140,
+        "genre": [
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "plot": "Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith Lord Darth Sidious enacts his long-planned strategy to seize power, the fate of Anakin Skywalker, the Jedi order, and the entire galaxy hangs in the balance."
+    },
+    "Rogue One: A Star Wars Story": {
+        "id": 5,
+        "name": "Rogue One: A Star Wars Story",
+        "poster_path": "./images/RogueOne.webp",
+        "lang": "English",
+        "vote_average": 7.4,
+        "vote_count": 9301,
+        "runtime": 133,
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "A rogue band of resistance fighters unite for a daring mission to steal the Death Star plans."
+    },
+    "The Empire Strikes Back": {
+        "id": 6,
+        "name": "The Empire Strikes Back",
+        "poster_path": "./images/EmpireStrikesBack.jpg",
+        "lang": "English",
+        "vote_average": 8.2,
+        "vote_count": 8410,
+        "runtime": 124,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair."
+    },
+    "Return of the Jedi": {
+        "id": 7,
+        "name": "Return of the Jedi",
+        "poster_path": "./images/ReturnoftheJedi.jpg",
+        "lang": "English",
+        "vote_average": 7.9,
+        "vote_count": 7179,
+        "runtime": 135,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, while the Emperor seeks to destroy the Rebellion once and for all with a second dreaded Death Star."
+    },
+    "The Godfather: Part II": {
+        "id": 8,
+        "name": "The Godfather: Part II",
+        "poster_path": "./images/Godfather2.jpg",
+        "lang": "English",
+        "vote_average": 8.3,
+        "vote_count": 3418,
+        "runtime": 200,
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            }
+        ],
+        "plot": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba."
+    },
+    "The Godfather: Part III": {
+        "id": 9,
+        "name": "The Godfather: Part III",
+        "poster_path": "./images/Godfather3.jpg",
+        "lang": "English",
+        "vote_average": 7.1,
+        "vote_count": 1593,
+        "runtime": 170,
+        "genre": [
+            {
+                "id": 80,
+                "name": "Crime"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "plot": "In the midst of trying to legitimize his family enterprises in New York and Italy in 1979, aging Mafia don Michael Corleone seeks to vow for his sins while taking a young protégé under his wing."
+    },
+    "Forrest Gump": {
+        "id": 10,
+        "name": "Forrest Gump",
+        "poster_path": "./images/ForrestGump.jpg",
+        "lang": "English",
+        "vote_average": 8.2,
+        "vote_count": 8147,
+        "runtime": 142,
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            }
+        ],
+        "plot": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all he has achieved, his one true love eludes him."
+    },
+    "Pulp Fiction": {
+        "id": 11,
+        "name": "Pulp Fiction",
+        "poster_path": "./images/PulpFiction.jpg",
+        "lang": "English",
+        "vote_average": 8.3,
+        "vote_count": 8670,
+        "runtime": 154,
+        "genre": [
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            }
+        ],
+        "plot": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
+    },
+    "The Shawshank Redemption": {
+        "id": 12,
+        "name": "The Shawshank Redemption",
+        "poster_path": "./images/Shawshank.jpg",
+        "lang": "English",
+        "vote_average": 8.5,
+        "vote_count": 8358,
+        "runtime": 142,
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            }
+        ],
+        "plot": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
+    },
+    "Spirited Away": {
+        "id": 13,
+        "name": "Spirited Away",
+        "poster_path": "./images/SpiritedAway.webp",
+        "lang": "Japanese",
+        "vote_average": 8.3,
+        "vote_count": 3968,
+        "runtime": 125,
+        "genre": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "plot": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family."
+    },
+    "Inception": {
+        "id": 14,
+        "name": "Inception",
+        "poster_path": "./images/Inception.jpg",
+        "lang": "English",
+        "vote_average": 8.1,
+        "vote_count": 14075,
+        "runtime": 148,
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 9648,
+                "name": "Mystery"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "plot": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious."
+    },
+    "Fight Club": {
+        "id": 15,
+        "name": "Fight Club",
+        "poster_path": "./images/FightClub.jpg",
+        "lang": "English",
+        "vote_average": 8.3,
+        "vote_count": 9678,
+        "runtime": 139,
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "plot": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion."
+    },
+    "The Matrix": {
+        "id": 16,
+        "name": "The Matrix",
+        "poster_path": "./images/Matrix.jpg",
+        "lang": "English",
+        "vote_average": 8.1,
+        "vote_count": 9079,
+        "runtime": 136,
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
+    },
+    "Interstellar": {
+        "id": 17,
+        "name": "Interstellar",
+        "poster_path": "./images/Interstellar.jpg",
+        "lang": "English",
+        "vote_average": 8.1,
+        "vote_count": 11187,
+        "runtime": 169,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "plot": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
+    },
+    "The Lord of the Rings: The Fellowship of the Ring": {
+        "id": 18,
+        "name": "The Lord of the Rings: The The Fellowship of the Ring",
+        "poster_path": "./images/FellowshipoftheRing.jpg",
+        "lang": "English",
+        "vote_average": 8,
+        "vote_count": 8892,
+        "runtime": 178,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "plot": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed."
+    },
+    "The Lord of the Rings: The Two Towers": {
+        "id": 19,
+        "name": "The Lord of the Rings: The Two Towers",
+        "poster_path": "./images/TwoTowers.jpg",
+        "lang": "English",
+        "vote_average": 8,
+        "vote_count": 7641,
+        "runtime": 179,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "plot": "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard."
+    },
+    "The Lord of the Rings: The Return of the King": {
+        "id": 20,
+        "name": "The Lord of the Rings: The Return of the King",
+        "poster_path": "./images/ReturnoftheKing.jpg",
+        "lang": "English",
+        "vote_average": 8.1,
+        "vote_count": 8226,
+        "runtime": 201,
+        "genre": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "plot": "Aragorn is revealed as the heir to the ancient kings of Gondor, and he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron’s forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord’s realm."
+    },
+    "Parasite": {
+        "id": 21,
+        "name": "Parasite",
+        "poster_path": "./images/parasite.jpg",
+        "lang": "Korean",
+        "vote_average": 8.5,
+        "vote_count": 5620,
+        "runtime": 132,
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "plot": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
     }
 }

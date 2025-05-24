@@ -2,9 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <title>2023123032 lab_01</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
+    <title>2023123032 lab_04</title>
+    <link rel="stylesheet" href="main.css">  
 </head>
 <body>
     <div class="container">
@@ -16,12 +15,24 @@
             <a href="login.html">로그인</a>
             <a href="signup.html">회원가입</a>
         </nav>
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="영화 제목 검색...">
+            <button id="search-button">검색</button>
+            <select id="sort-select">
+                <option value="default">정렬 기준</option>
+                <option value="rating-desc">평점 높은 순</option>
+                <option value="rating-asc">평점 낮은 순</option>
+                <option value="runtime-desc">상영 시간 긴 순</option>
+                <option value="runtime-asc">상영 시간 짧은 순</option>
+            </select>
+        </div>
         <div class="content"> <!--class = movie/poster/multicolumn-wrapper/multicolumn existed-->
             <div class="flex-container"> 
-                <div class="movie-list">
+                <div class="movie-list" id="movie-list">
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
