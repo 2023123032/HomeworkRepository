@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.getElementById("search-button");
     const sortSelect = document.getElementById("sort-select");
 
-    let allMovies = []; // 모든 영화 데이터 저장
-    let currentMovies = []; // 현재 표시/정렬 중인 영화 데이터
-    let displayIndex = 0; // 현재까지 표시된 영화 인덱스
-    const moviesPerLoad = 3; // 한 번에 로드할 영화 수
-    let isLoading = false; // 중복 로딩 방지 플래그
+    let allMovies = [];
+    let currentMovies = [];
+    let displayIndex = 0;
+    const moviesPerLoad = 1;
+    let isLoading = false;
 
     // 1. 데이터 로드
     fetch("./product.json")
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
         allMovies = Object.values(data);
-        currentMovies = [...allMovies]; // 초기에는 모든 영화를 표시
-        displayMovies(); // 초기 영화 표시
+        currentMovies = [...allMovies];
+        displayMovies();
     })
     .catch(error => {
         console.error("Failed to load movie data:", error);
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentMovies.sort((a, b) => a.runtime - b.runtime);
                 break;
             default:
-                currentMovies = [...allMovies.filter(movie => // 검색 결과 유지하며 정렬
+                currentMovies = [...allMovies.filter(movie =>
                     movie.name.toLowerCase().includes(searchInput.value.toLowerCase())
                 )];
         }
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     searchButton.addEventListener("click", searchMovies);
-    searchInput.addEventListener("keypress", (e) => { // Enter 키로도 검색
+    searchInput.addEventListener("keypress", (e) => {
         if (e.key === 'Enter') {
             searchMovies();
         }
@@ -131,5 +131,5 @@ document.addEventListener("DOMContentLoaded", () => {
     sortSelect.addEventListener("change", (e) => {
         sortMovies(e.target.value);
     });
-    window.addEventListener("scroll", infiniteScroll); // 스크롤 이벤트
+    window.addEventListener("scroll", infiniteScroll);
 });

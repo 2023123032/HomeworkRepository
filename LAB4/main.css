@@ -215,10 +215,10 @@ body {
 
 .poster .plot {
   position: absolute;
-  top: 10%;
+  /* top: 10%;
   bottom: 10%;
   left: 10%;
-  right: 10%;
+  right: 10%; */
   background-color: black;
   color: white;
   padding: 10px;
