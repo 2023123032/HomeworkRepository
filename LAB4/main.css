@@ -90,7 +90,6 @@ body {
   overflow: hidden; /*orig auto*/
   position: relative;
   height: 60px;
-  text-align: center; /*new*/
 }
 
 .slide-in {
@@ -171,8 +170,6 @@ body {
 
 .content {
   margin-top: 30px;
-  gap: 20px;
-  flex-wrap: nowrap; /* nowrap맞나?*/
 }
 
 .movie-list {
@@ -212,9 +209,9 @@ body {
   display: block;
 }
 
-.poster:hover img {
+/* .poster:hover img {
   transform: scale(1.2);
-}
+} */
 
 .poster .plot {
   position: absolute;
@@ -281,22 +278,10 @@ body {
   .nav {
       justify-content: space-between;
   }
-  .content {
-      flex-direction: column;
-  }
-  .movie {
-      width: calc(50% - 30px); /* 한 줄에 2개 (간격 고려) */
-  }
 }
 
 @media screen and (min-width: 801px) {
   .nav {
       justify-content: space-around;
-  }
-  .content {
-      flex-direction: column;
-  }
-  .movie {
-      width: calc(33.333% - 34px); /* 한 줄에 3개 (간격 고려) */
   }
 }
