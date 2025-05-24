@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let allMovies = []; // 모든 영화 데이터 저장
     let currentMovies = []; // 현재 표시/정렬 중인 영화 데이터
     let displayIndex = 0; // 현재까지 표시된 영화 인덱스
-    const moviesPerLoad = 2; // 한 번에 로드할 영화 수
+    const moviesPerLoad = 3; // 한 번에 로드할 영화 수
     let isLoading = false; // 중복 로딩 방지 플래그
 
     // 1. 데이터 로드

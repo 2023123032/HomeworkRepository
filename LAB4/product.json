@@ -90,7 +90,7 @@
     "Rogue One: A Star Wars Story": {
         "id": 5,
         "name": "Rogue One: A Star Wars Story",
-        "poster_path": "./images/RogueOne.webp",
+        "poster_path": "./images/RogueOne.jpg",
         "lang": "English",
         "vote_average": 7.4,
         "vote_count": 9301,
@@ -270,7 +270,7 @@
     "Spirited Away": {
         "id": 13,
         "name": "Spirited Away",
-        "poster_path": "./images/SpiritedAway.webp",
+        "poster_path": "./images/SpiritedAway.jpg",
         "lang": "Japanese",
         "vote_average": 8.3,
         "vote_count": 3968,
