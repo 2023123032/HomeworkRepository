@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>2023123032 lab_05</title>
+  <link rel="stylesheet" type="text/css" href="main.css"> 
+</head>
+<body>
+  <div class="container">
+    <header class="header-container">
+        <h1 class="slide-in">2023123032's Movie Pick</h1>
+    </header>
+    <nav class="nav">
+        <a href="/">메인</a>
+        <a href="login.html">로그인</a>
+        <a href="signup.html">회원가입</a>
+      </nav>
+    <form action="login.html" method="post" class="form-box">
+      <label>이름 : <input type="text" name="name" placeholder="이름 입력" required autofocus></label>
+
+      <label>생일 : <input type="date" name="dob"></label>
+
+      <label class="gender-row">성별 : 
+        <input type="radio" name="gender" value="male"> 남성 
+        <input type="radio" name="gender" value="female"> 여성
+      </label>
+      
+      <label>학년 : <input type="number" name="grade" step="1" min="1" max="4" value="1" required></label>
+      <label>아이디 : <input type="text" name="id" placeholder="아이디 입력" autocomplete="on" required></label>
+      <label>비밀번호 : <input type="password" name="password" placeholder="비밀번호 입력" required></label>
+      <label>이메일 : <input type="email" name="email" placeholder="이메일 입력" required></label>
+
+      <label>보안 질문 :
+        <select name="security">
+          <option value="pet">처음 키운 반려동물의 이름은?</option>
+          <option value="school">초등학교 이름은?</option>
+          <option value="city">태어난 도시는?</option>
+        </select>
+      </label>
+      
+      <label>답변 : <input type="text" name="answer"></label>
+      <button type="submit" class="signup">Signup</button>
+      <button type="reset" class="cancel">Cancel</button>
+    </form>
+  </div>
+</body>
+</html>

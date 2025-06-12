@@ -1,0 +1,287 @@
+/*css for login&signup*/
+h1 {
+  font-size: 24px;
+  color: #111;
+  margin: 10px;
+}
+
+#links {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.form-box {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #aaa;
+  width: 300px;
+  height: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="radio"]{
+  width: auto;
+  margin: 5px;
+}
+
+button {
+  width: 25%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.signup, .login {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+/*===============================================*/
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1020px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/*===============================================*/
+
+.header-container {
+  overflow: hidden; /*orig auto*/
+  position: relative;
+  height: 60px;
+}
+
+.slide-in {
+  position: relative;
+  animation-name: slideLeft;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  display: inline-block; /*new*/
+}
+
+@keyframes slideLeft {
+  from{left: -100%;}
+  25%{left: -75%}
+  55%{left: -50%}
+  75%{left: -25%}
+  to{left: 0%;}
+}
+
+/*===============================================*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+
+.nav a {
+  color: black;
+  padding: 5px 5px;
+  font-size: 14px;
+  margin-bottom: 0px;
+  text-decoration: none; /*new*/
+}
+
+.nav a:hover {
+  background-color: gray;
+  color: white; /*new*/
+}
+
+/*===============================================*/
+
+.controls {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button, .controls select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button {
+    background-color: #5cb85c;
+    color: white;
+    border-color: #4cae4c;
+}
+
+.controls button:hover {
+    background-color: #449d44;
+}
+
+/*===============================================*/
+
+.content {
+  margin-top: 30px;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:  10px 0;
+}
+
+.movie {
+  width: 320px;
+  height: 480px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+  border-color: #111;
+  text-align: center; /*new*/
+  overflow: auto;
+}
+
+.movie:hover { /*new*/
+  box-shadow: 0 4px 8px black;
+}
+
+.poster {
+  position: relative;
+  margin-bottom: 10px; /*new*/
+}
+
+.poster img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  transition: transform 2s ease;
+  display: block;
+}
+
+/* .poster:hover img {
+  transform: scale(1.2);
+} */
+
+.poster .plot {
+  position: absolute;
+  /* top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%; */
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex; /*orig none ->display: block;*/
+  /*---new---*/
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: auto; /*overflow-y?*/
+  box-sizing: border-box;
+}
+
+.movie h2 {
+    font-size: 16px;
+    margin: 0 5px 0 5px;
+    min-height: 48px;
+}
+
+.movie p {
+    font-size: 12px;
+    margin: 3px 10px;
+    color: #555;
+}
+
+/* .multicolumn-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.multicolumn {
+  column-count: 2;
+  border-top: 2px solid black;
+  padding-top: 5px;
+} */
+
+/*===============================================*/
+
+@media screen and (max-width: 480px) {
+  .nav {
+      flex-direction: column;
+      align-items: center;
+  }
+  .controls input[type="text"] {
+      width: 80%;
+      margin-bottom: 10px;
+  }
+  .controls button, .controls select {
+      width: 80%;
+      margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .nav {
+      justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .nav {
+      justify-content: space-around;
+  }
+}

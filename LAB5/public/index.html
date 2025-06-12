@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>2023123032 lab_05</title>
+    <link rel="stylesheet" type="text/css" href="main.css">  
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <h1 class="slide-in">2023123032's Movie Pick</h1>
+        </header>
+        <nav class="nav">
+            <a href="/">메인</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </nav>
+
+        <form action="/" method="GET" class="controls">
+            <input type="text" id="search-input" name="search" placeholder="영화 제목 검색...">
+            <button type="submit" id="search-button">검색</button> 
+            <select id="sort-select" name="sort">
+                <option value="default">정렬 기준</option>
+                <option value="rating-desc">평점 높은 순</option>
+                <option value="rating-asc">평점 낮은 순</option>
+                <option value="runtime-desc">상영 시간 긴 순</option>
+                <option value="runtime-asc">상영 시간 짧은 순</option>
+            </select>
+        </form>
+
+        <div class="content"><!--class = movie/poster/multicolumn-wrapper/multicolumn existed-->
+            <div class="movie-list" id="movie-list">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

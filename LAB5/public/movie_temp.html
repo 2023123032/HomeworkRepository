@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2023123032 lab_05</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container" id="movie-detail-container">
+            <h1 class="slide-in">2023123032's Movie Pick</h1>
+        </header>
+        <nav class="nav">
+            <a href="/">메인</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </nav>
+        <div class="detail-container">
+            <h1>{{movie_title}}</h1>
+            <div class="detail-content">
+                <img src="{{movie_image_src}}" alt="{{movie_title}}">
+                <div class="detail-info">
+                    <p><strong>개봉일:</strong> {{movie_release_date}}</p>
+                    <p><strong>평점:</strong> {{movie_rate}}</p>
+                    <p><strong>줄거리:</strong> {{movie_overview}}</p>
+                </div>
+            </div>
+            <hr>
+            <h2>후기</h2>
+            <div id="comments-section">{{comments_section}}</div>
+            
+            <h3 style="margin-top: 20px;">새 후기 남기기</h3>
+            <form class="comment-form" action="/comments" method="POST">
+                <textarea name="content" placeholder="후기를 남겨주세요." required rows="4"></textarea>
+                <input type="hidden" name="movieId" value="{{movie_id}}">
+                <button type="submit">등록</button>
+            </form>
+        </div>
+    </div>
+   <script>
+   </script>
+</body>
+</html>
