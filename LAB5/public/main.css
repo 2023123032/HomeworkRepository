@@ -86,12 +86,14 @@ body {
 
 /*===============================================*/
 
+ /*사이트 이름*/
 .header-container {
   overflow: hidden; /*orig auto*/
   position: relative;
   height: 60px;
 }
 
+ /*사이트 이동 애니메이션*/
 .slide-in {
   position: relative;
   animation-name: slideLeft;
@@ -110,6 +112,7 @@ body {
 
 /*===============================================*/
 
+ /*네비게이션 바*/
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +138,7 @@ body {
 
 /*===============================================*/
 
+ /*검색, 정렬 기준*/
 .controls {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -168,10 +172,12 @@ body {
 
 /*===============================================*/
 
+ /*전체*/
 .content {
   margin-top: 30px;
 }
 
+ /*영화카드 컨테이너*/
 .movie-list {
   display: flex;
   flex-direction: row;
@@ -179,6 +185,7 @@ body {
   padding:  10px 0;
 }
 
+ /*영화카드*/
 .movie {
   width: 320px;
   height: 480px;
@@ -192,15 +199,18 @@ body {
   overflow: auto;
 }
 
+ /*영화카드-그림자*/
 .movie:hover { /*new*/
   box-shadow: 0 4px 8px black;
 }
 
+ /*영화카드-세부*/
 .poster {
   position: relative;
   margin-bottom: 10px; /*new*/
 }
 
+ /*영화이미지*/
 .poster img {
   width: 100%;
   height: 300px; 
@@ -209,16 +219,12 @@ body {
   display: block;
 }
 
-/* .poster:hover img {
-  transform: scale(1.2);
-} */
-
 .poster .plot {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  /* top: 10%;
-  bottom: 10%;
-  left: 10%;
-  right: 10%; */
   background-color: black;
   color: white;
   padding: 10px;
@@ -231,14 +237,21 @@ body {
   text-align: left;
   overflow: auto; /*overflow-y?*/
   box-sizing: border-box;
+  opacity: 0;
 }
 
+.poster .plot:hover {
+  opacity: 1;
+}
+
+/*영화제목*/
 .movie h2 {
     font-size: 16px;
     margin: 0 5px 0 5px;
     min-height: 48px;
 }
 
+/*영화정보*/
 .movie p {
     font-size: 12px;
     margin: 3px 10px;
@@ -257,6 +270,51 @@ body {
   padding-top: 5px;
 } */
 
+/*===============================================*/
+/* 영화 상세 페이지 */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.detail-container img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.comment{
+  border-bottom: 1px solid #111;
+}
+
+/* width가 왠지 모르겠지만 적용이 안됨*/
+#comment-container{
+  width: 80%;
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+}
+
+.comment-form input{
+  width: max-content;
+  margin: 10%;
+  padding: 10px;
+}
 /*===============================================*/
 
 @media screen and (max-width: 480px) {

@@ -7,7 +7,7 @@ const sqlite3 = require('sqlite3');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 데이터베이스 연결 함수 (async/await 사용)
+// 데이터베이스 연결 함수(에러 체크)
 const dbPath = path.join(__dirname, "product.db");
 async function getDBConnection() {
     try {
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// 1. 메인 페이지 (영화 목록)
+//메인 페이지
 app.get('/', async (req, res) => {
     try {
         const { search, sort } = req.query;
@@ -60,14 +60,14 @@ app.get('/', async (req, res) => {
                 break;
         }
 
-        // db.all을 await으로 처리
+        // db받고 닫기
         const movies = await db.all(sql, params);
         await db.close();
 
         const indexPath = path.join(__dirname, 'public', 'index.html');
         let htmlData = await fs.readFile(indexPath, 'utf8');
 
-        // 영화 카드 HTML 생성 (줄거리(plot) div 추가)
+        // 영화 카드 HTML 생성
         const movieCards = movies.map(movie => `
             <div class="movie">
                 <a href="/movie.html?id=${movie.movie_id}" style="text-decoration: none; color: inherit;">
@@ -96,7 +96,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-// 2. 영화 상세 페이지 - GET /movie.html
+// 2. 영화 상세 페이지(html로 하는게 맞는지는 모르겠지만 동영상에 이렇게 하셔서 이렇게 구성했습니다)
 app.get('/movie.html', async (req, res) => {
     try {
         const movieId = req.query.id;
@@ -122,16 +122,16 @@ app.get('/movie.html', async (req, res) => {
             //에러시?
         }
 
-        //이쪽에 문제
+        //이쪽에 문제있었음(체크 필요)
         const detailTemplatePath = path.join(__dirname, 'public', 'movie_temp.html'); 
         let detailHtml = await fs.readFile(detailTemplatePath, 'utf8');
 
         detailHtml = detailHtml.replace(/{{movie_title}}/g, movie.movie_title)
-                               .replace('{{movie_image_src}}', `${movie.movie_image}`) // 4번 요청사항: 이미지 경로 수정
+                               .replace(/{{movie_id}}/g, movie.movie_id)
+                               .replace('{{movie_image_src}}', `${movie.movie_image}`)
                                .replace('{{movie_release_date}}', movie.movie_release_date)
                                .replace('{{movie_rate}}', movie.movie_rate)
-                               .replace('{{movie_overview}}', movie.movie_overview)
-                               .replace('{{movie_id}}', movie.movie_id);
+                               .replace('{{movie_overview}}', movie.movie_overview);
 
         const commentsHtml = movieComments.length > 0 ? movieComments.map(comment => `
             <div class="comment">
@@ -149,12 +149,10 @@ app.get('/movie.html', async (req, res) => {
 });
 
 
-// 3. 새 후기 작성 - POST
+// 코멘트 작성
 app.post('/comments', async (req, res) => {
     try {
-        // 1번 요청사항: content와 movieId만 받도록 수정
         const { content, movieId } = req.body;
-
         if (!content || !movieId) {
             return res.status(400).send('내용과 영화 ID가 모두 필요합니다.');
         }
@@ -167,7 +165,7 @@ app.post('/comments', async (req, res) => {
             const data = await fs.readFile(commentsPath, 'utf8');
             allComments = JSON.parse(data);
         } catch (readErr) {
-            // 파일이 없으면 새로 시작
+            //에러시?
         }
 
         if (!allComments[movieId]) {
@@ -177,7 +175,7 @@ app.post('/comments', async (req, res) => {
 
         await fs.writeFile(commentsPath, JSON.stringify(allComments, null, 2), 'utf8');
         
-        // 3번 요청사항: 올바른 상세페이지로 리다이렉트
+        //코멘트 올리면 페이지 리프레시
         res.redirect(`/movie.html?id=${movieId}`);
     } catch (err) {
         console.error(err);
@@ -185,7 +183,6 @@ app.post('/comments', async (req, res) => {
     }
 });
 
-// --- 서버 시작 ---
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
